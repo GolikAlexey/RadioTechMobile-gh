@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">RadioTechMobile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="lc_title">Колебательный контур</string>
+    <string name="r_title">Параллельное соединение резисторов</string>
+    <string name="l_title">Индуктивность катушки</string>
+    <string name="calculator_title">Калькулятор</string>
+    <string name="reference_book_title">Справочник</string>
+    <string name="l_input">Введите L</string>
+    <string name="c_input">Введите C</string>
+    <string name="f_input">Введите частоту</string>
+    <string name="r1_input">Введите R1</string>
+    <string name="r2_input">Введите R2</string>
+    <string name="r3_input">Введите R3</string>
+    <string name="f_calculate">Рассчитать  F</string>
+    <string name="l_calculate">Рассчитать  L</string>
+    <string name="c_calculate">Рассчитать  C</string>
+    <string name="reset">Сброс</string>
+
+    <string-array name="spinner_L">
+        <item>нГн</item>
+        <item>мкГн</item>
+        <item>мГн</item>
+    </string-array>
+
+    <string-array name="spinner_C">
+        <item>пФ</item>
+        <item>нФ</item>
+        <item>мкФ</item>
+    </string-array>
+
+    <string-array name="spinner_F">
+        <item>Гц</item>
+        <item>КГц</item>
+        <item>МГц</item>
+    </string-array>
+
+    <string-array name="spinner_R">
+        <item>Ом</item>
+        <item>КОм</item>
+        <item>МОм</item>
+    </string-array>
+
+</resources>
