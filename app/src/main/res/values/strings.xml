@@ -18,6 +18,7 @@
     <string name="f_calculate">Рассчитать  F</string>
     <string name="l_calculate">Рассчитать  L</string>
     <string name="c_calculate">Рассчитать  C</string>
+    <string name="r_calculate">Рассчитать\nобщее  R</string>
     <string name="reset">Сброс</string>
 
     <string-array name="spinner_L">

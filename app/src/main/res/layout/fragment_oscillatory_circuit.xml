@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tabs_lc" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/resistorsFragmentContainerView"
         android:name="com.example.radiotechmobile.FragmentFrequency"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

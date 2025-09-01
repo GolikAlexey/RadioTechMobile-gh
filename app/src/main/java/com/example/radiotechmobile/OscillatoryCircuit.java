@@ -27,11 +27,11 @@ public class OscillatoryCircuit extends Fragment {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 if (tab.getPosition() == 0) {
-                   fragmentManager.beginTransaction().replace(R.id.fragmentContainerView, new FragmentFrequency()).commit();
+                   fragmentManager.beginTransaction().replace(R.id.resistorsFragmentContainerView, new FragmentFrequency()).commit();
                 } else if (tab.getPosition() == 1) {
-                   fragmentManager.beginTransaction().replace(R.id.fragmentContainerView, new FragmentL()).commit();
+                   fragmentManager.beginTransaction().replace(R.id.resistorsFragmentContainerView, new FragmentL()).commit();
                 } else if (tab.getPosition() == 2) {
-                   fragmentManager.beginTransaction().replace(R.id.fragmentContainerView, new FragmentC()).commit();
+                   fragmentManager.beginTransaction().replace(R.id.resistorsFragmentContainerView, new FragmentC()).commit();
                 }
             }
 

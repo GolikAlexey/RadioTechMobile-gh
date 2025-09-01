@@ -6,12 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".Resistors">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs_resistors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="@color/black"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 резистора" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 резистора" />
+
+    </com.google.android.material.tabs.TabLayout>
+
     <TextView
+        android:id="@+id/textView_r_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second Page!"
+        android:layout_marginTop="12dp"
+        android:text="@string/r_title"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs_resistors" />
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/resistorsFragmentContainerView"
+        android:name="com.example.radiotechmobile.FragmentR2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
