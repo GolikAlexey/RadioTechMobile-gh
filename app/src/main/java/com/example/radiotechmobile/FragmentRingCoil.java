@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Calculator#newInstance} factory method to
+ * Use the {@link FragmentRingCoil#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Calculator extends Fragment {
+public class FragmentRingCoil extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class Calculator extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Calculator() {
+    public FragmentRingCoil() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class Calculator extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_calculator.
+     * @return A new instance of fragment FragmentRingCoil.
      */
     // TODO: Rename and change types and number of parameters
-    public static Calculator newInstance(String param1, String param2) {
-        Calculator fragment = new Calculator();
+    public static FragmentRingCoil newInstance(String param1, String param2) {
+        FragmentRingCoil fragment = new FragmentRingCoil();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class Calculator extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calculator, container, false);
+        return inflater.inflate(R.layout.fragment_ring_coil, container, false);
     }
 }

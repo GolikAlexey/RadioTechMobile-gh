@@ -53,25 +53,32 @@ public class FragmentL extends Fragment {
                     double C = Double.parseDouble(edit_text_input_C.getText().toString());
                     double L;
 
-                    if (position_F == 0){
-                        power_F = 0;
-                    } else if (position_F == 1){
-                        power_F = 3;
-                    } else if (position_F == 2){
-                        power_F = 6;
+                    if(F<=0 || C<=0){
+
+                        text_result_L.setText("Ошибка ввода");
+
+                    }else {
+
+                        if (position_F == 0) {
+                            power_F = 0;
+                        } else if (position_F == 1) {
+                            power_F = 3;
+                        } else if (position_F == 2) {
+                            power_F = 6;
+                        }
+
+                        if (position_C == 0) {
+                            power_C = -12;
+                        } else if (position_C == 1) {
+                            power_C = -9;
+                        } else if (position_C == 2) {
+                            power_C = -6;
+                        }
+
+                        L = 0.001 * Math.round(1000000000 * calculationInductance(F, C, power_F, power_C));
+
+                        text_result_L.setText("L = " + L + " мкГн");
                     }
-
-                    if (position_C == 0){
-                        power_C = -12;
-                    } else if (position_C == 1){
-                        power_C = -9;
-                    } else if (position_C == 2){
-                        power_C = -6;
-                    }
-
-                    L = 0.001 * Math.round(1000000000 * calculationInductance(F, C, power_F, power_C));
-
-                    text_result_L.setText("L = " + L + " мкГн");
                 }
             }
         });

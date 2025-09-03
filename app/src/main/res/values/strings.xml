@@ -7,7 +7,6 @@
     <string name="lc_title">Колебательный контур</string>
     <string name="r_title">Параллельное соединение резисторов</string>
     <string name="l_title">Индуктивность катушки</string>
-    <string name="calculator_title">Калькулятор</string>
     <string name="reference_book_title">Справочник</string>
     <string name="l_input">Введите L</string>
     <string name="c_input">Введите C</string>
@@ -27,6 +26,61 @@
         <item>мГн</item>
     </string-array>
 
+    <string-array name="spinner_L_core">
+        <item>Без сердечника</item>
+        <item>М 7 ВН</item>
+        <item>М 9 ВН</item>
+        <item>М 20 ВН</item>
+        <item>М 30 ВН</item>
+        <item>М 50 ВН</item>
+        <item>М 60 НН</item>
+        <item>М 100 НН</item>
+        <item>М 200 НН</item>
+        <item>М 300 ННИ</item>
+        <item>М 400 НН</item>
+        <item>М 450 НМИ</item>
+        <item>М 600 НН</item>
+        <item>М 700 НМ</item>
+        <item>М 800 НН</item>
+        <item>М 1000 НН</item>
+        <item>М 1500 НМ</item>
+        <item>М 1600 НМИ</item>
+        <item>М 2000 НН</item>
+        <item>М 3000 НМ</item>
+        <item>М 4000 НМ</item>
+        <item>М 6000 НМ</item>
+        <item>М 10000 НМ</item>
+        <item>М 20000 НМ</item>
+        <item>М 25000 НМ</item>
+    </string-array>
+
+    <string-array name="spinner_L_core_ring">
+        <item>М 7 ВН</item>
+        <item>М 9 ВН</item>
+        <item>М 20 ВН</item>
+        <item>М 30 ВН</item>
+        <item>М 50 ВН</item>
+        <item>М 60 НН</item>
+        <item>М 100 НН</item>
+        <item>М 200 НН</item>
+        <item>М 300 ННИ</item>
+        <item>М 400 НН</item>
+        <item>М 450 НМИ</item>
+        <item>М 600 НН</item>
+        <item>М 700 НМ</item>
+        <item>М 800 НН</item>
+        <item>М 1000 НН</item>
+        <item>М 1500 НМ</item>
+        <item>М 1600 НМИ</item>
+        <item>М 2000 НН</item>
+        <item>М 3000 НМ</item>
+        <item>М 4000 НМ</item>
+        <item>М 6000 НМ</item>
+        <item>М 10000 НМ</item>
+        <item>М 20000 НМ</item>
+        <item>М 25000 НМ</item>
+    </string-array>
+
     <string-array name="spinner_C">
         <item>пФ</item>
         <item>нФ</item>
@@ -43,6 +97,11 @@
         <item>Ом</item>
         <item>КОм</item>
         <item>МОм</item>
+    </string-array>
+
+    <string-array name="spinner_d">
+        <item>мм</item>
+        <item>см</item>
     </string-array>
 
 </resources>

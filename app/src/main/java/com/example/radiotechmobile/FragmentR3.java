@@ -43,11 +43,11 @@ public class FragmentR3 extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if(edit_text_input_R1.getText().length() == 0 || edit_text_input_R2.getText().length() == 0 || edit_text_input_R3.getText().length() == 0){
+                if (edit_text_input_R1.getText().length() == 0 || edit_text_input_R2.getText().length() == 0 || edit_text_input_R3.getText().length() == 0) {
 
                     text_result_RRR.setText("Заполните все поля");
 
-                }else{
+                } else {
                     int position_R1 = spinner_R1.getSelectedItemPosition();
                     int position_R2 = spinner_R2.getSelectedItemPosition();
                     int position_R3 = spinner_R3.getSelectedItemPosition();
@@ -59,40 +59,47 @@ public class FragmentR3 extends Fragment {
                     double R3 = Double.parseDouble(edit_text_input_R3.getText().toString());
                     float R;
 
-                    if (position_R1 == 0){
-                        power_R1 = 0;
-                    } else if (position_R1 == 1){
-                        power_R1 = 3;
-                    } else if (position_R1 == 2){
-                        power_R1 = 6;
-                    }
+                    if (R1 <= 0 || R2 <= 0 || R3 <= 0) {
 
-                    if (position_R2 == 0){
-                        power_R2 = 0;
-                    } else if (position_R2 == 1){
-                        power_R2 = 3;
-                    } else if (position_R2 == 2){
-                        power_R2 = 6;
-                    }
+                        text_result_RRR.setText("Ошибка ввода");
 
-                    if (position_R3 == 0){
-                        power_R3 = 0;
-                    } else if (position_R2 == 1){
-                        power_R3 = 3;
-                    } else if (position_R2 == 2){
-                        power_R3 = 6;
-                    }
+                    } else {
 
-                    R = (float)calculationRRR(R1, R2, R3, power_R1, power_R2, power_R3);
+                        if (position_R1 == 0) {
+                            power_R1 = 0;
+                        } else if (position_R1 == 1) {
+                            power_R1 = 3;
+                        } else if (position_R1 == 2) {
+                            power_R1 = 6;
+                        }
 
-                    if (R<1000){
-                        text_result_RRR.setText("R = " + R + " Ом");
-                    }else if(R>=1000 && R<1000000){
-                        R = R/1000;
-                        text_result_RRR.setText("R = " + R + " КОм");
-                    }else if(R>=1000000){
-                        R = R/1000000;
-                        text_result_RRR.setText("R = " + R + " МОм");
+                        if (position_R2 == 0) {
+                            power_R2 = 0;
+                        } else if (position_R2 == 1) {
+                            power_R2 = 3;
+                        } else if (position_R2 == 2) {
+                            power_R2 = 6;
+                        }
+
+                        if (position_R3 == 0) {
+                            power_R3 = 0;
+                        } else if (position_R2 == 1) {
+                            power_R3 = 3;
+                        } else if (position_R2 == 2) {
+                            power_R3 = 6;
+                        }
+
+                        R = (float) calculationRRR(R1, R2, R3, power_R1, power_R2, power_R3);
+
+                        if (R < 1000) {
+                            text_result_RRR.setText("R = " + R + " Ом");
+                        } else if (R >= 1000 && R < 1000000) {
+                            R = R / 1000;
+                            text_result_RRR.setText("R = " + R + " КОм");
+                        } else if (R >= 1000000) {
+                            R = R / 1000000;
+                            text_result_RRR.setText("R = " + R + " МОм");
+                        }
                     }
                 }
             }
@@ -108,8 +115,8 @@ public class FragmentR3 extends Fragment {
         return view;
     }
 
-    private double calculationRRR(double R1, double R2, double R3, byte power_R1, byte power_R2, byte power_R3){
+    private double calculationRRR(double R1, double R2, double R3, byte power_R1, byte power_R2, byte power_R3) {
 
-        return (R1*Math.pow(10, power_R1)*R2*Math.pow(10, power_R2)*R3*Math.pow(10, power_R3))/(R1*Math.pow(10, power_R1)*R2*Math.pow(10, power_R2)+R2*Math.pow(10, power_R2)*R3*Math.pow(10, power_R3)+R1*Math.pow(10, power_R1)*R3*Math.pow(10, power_R3));
+        return (R1 * Math.pow(10, power_R1) * R2 * Math.pow(10, power_R2) * R3 * Math.pow(10, power_R3)) / (R1 * Math.pow(10, power_R1) * R2 * Math.pow(10, power_R2) + R2 * Math.pow(10, power_R2) * R3 * Math.pow(10, power_R3) + R1 * Math.pow(10, power_R1) * R3 * Math.pow(10, power_R3));
     }
 }

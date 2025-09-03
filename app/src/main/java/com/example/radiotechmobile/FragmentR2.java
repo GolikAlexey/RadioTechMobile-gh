@@ -52,32 +52,39 @@ public class FragmentR2 extends Fragment {
                     double R2 = Double.parseDouble(edit_text_input_R2.getText().toString());
                     float R;
 
-                    if (position_R1 == 0){
-                        power_R1 = 0;
-                    } else if (position_R1 == 1){
-                        power_R1 = 3;
-                    } else if (position_R1 == 2){
-                        power_R1 = 6;
-                    }
+                    if (R1<=0 || R2<=0){
 
-                    if (position_R2 == 0){
-                        power_R2 = 0;
-                    } else if (position_R2 == 1){
-                        power_R2 = 3;
-                    } else if (position_R2 == 2){
-                        power_R2 = 6;
-                    }
+                        text_result_RR.setText("Ошибка ввода");
 
-                    R = (float)calculationRR(R1, R2, power_R1, power_R2);
+                    }else{
 
-                    if (R<1000){
-                        text_result_RR.setText("R = " + R + " Ом");
-                    }else if(R>=1000 && R<1000000){
-                        R = R/1000;
-                        text_result_RR.setText("R = " + R + " КОм");
-                    }else if(R>=1000000){
-                        R = R/1000000;
-                        text_result_RR.setText("R = " + R + " МОм");
+                        if (position_R1 == 0){
+                            power_R1 = 0;
+                        } else if (position_R1 == 1){
+                            power_R1 = 3;
+                        } else if (position_R1 == 2){
+                            power_R1 = 6;
+                        }
+
+                        if (position_R2 == 0){
+                            power_R2 = 0;
+                        } else if (position_R2 == 1){
+                            power_R2 = 3;
+                        } else if (position_R2 == 2){
+                            power_R2 = 6;
+                        }
+
+                        R = (float)calculationRR(R1, R2, power_R1, power_R2);
+
+                        if (R<1000){
+                            text_result_RR.setText("R = " + R + " Ом");
+                        }else if(R>=1000 && R<1000000){
+                            R = R/1000;
+                            text_result_RR.setText("R = " + R + " КОм");
+                        }else if(R>=1000000){
+                            R = R/1000000;
+                            text_result_RR.setText("R = " + R + " МОм");
+                        }
                     }
                 }
             }

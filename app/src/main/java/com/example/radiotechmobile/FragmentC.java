@@ -53,25 +53,32 @@ public class FragmentC extends Fragment {
                     double L = Double.parseDouble(edit_text_input_L.getText().toString());
                     int C;
 
-                    if (position_F == 0){
-                        power_F = 0;
-                    } else if (position_F == 1){
-                        power_F = 3;
-                    } else if (position_F == 2){
-                        power_F = 6;
+                    if(F<=0 || L<=0){
+
+                        text_result_C.setText("Ошибка ввода");
+
+                    }else{
+
+                        if (position_F == 0){
+                            power_F = 0;
+                        } else if (position_F == 1){
+                            power_F = 3;
+                        } else if (position_F == 2){
+                            power_F = 6;
+                        }
+
+                        if (position_L == 0){
+                            power_L = -9;
+                        } else if (position_L == 1){
+                            power_L = -6;
+                        } else if (position_L == 2){
+                            power_L = -3;
+                        }
+
+                        C = (int)Math.round(1000000000 * calculationCapacity(F, L, power_F, power_L));
+
+                        text_result_C.setText("C = " + C + " пФ");
                     }
-
-                    if (position_L == 0){
-                        power_L = -9;
-                    } else if (position_L == 1){
-                        power_L = -6;
-                    } else if (position_L == 2){
-                        power_L = -3;
-                    }
-
-                    C = (int)Math.round(1000000000 * calculationCapacity(F, L, power_F, power_L));
-
-                    text_result_C.setText("C = " + C + " пФ");
                 }
             }
         });

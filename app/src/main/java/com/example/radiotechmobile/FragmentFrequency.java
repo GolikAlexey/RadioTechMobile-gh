@@ -55,25 +55,33 @@ public class FragmentFrequency extends Fragment {
                     double C = Double.parseDouble(edit_text_input_C.getText().toString());
                     double F;
 
-                    if (position_L == 0){
-                        power_L = -9;
-                    } else if (position_L == 1){
-                        power_L = -6;
-                    } else if (position_L == 2){
-                        power_L = -3;
+                    if(L<=0 || C<=0){
+
+                        text_result_F.setText("Ошибка ввода");
+
+                    }else{
+
+                        if (position_L == 0){
+                            power_L = -9;
+                        } else if (position_L == 1){
+                            power_L = -6;
+                        } else if (position_L == 2){
+                            power_L = -3;
+                        }
+
+                        if (position_C == 0){
+                            power_C = -12;
+                        } else if (position_C == 1){
+                            power_C = -9;
+                        } else if (position_C == 2){
+                            power_C = -6;
+                        }
+
+                        F = 0.0000001 * Math.round(10 * calculationFrequency(L, C, power_L, power_C));
+
+                        text_result_F.setText("F = " + F + " МГц");
                     }
 
-                    if (position_C == 0){
-                        power_C = -12;
-                    } else if (position_C == 1){
-                        power_C = -9;
-                    } else if (position_C == 2){
-                        power_C = -6;
-                    }
-
-                    F = 0.0000001 * Math.round(10 * calculationFrequency(L, C, power_L, power_C));
-
-                    text_result_F.setText("F = " + F + " МГц");
                 }
             }
         });
