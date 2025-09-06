@@ -2,15 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:id="@+id/group1">
         <item android:id="@+id/reference_book_page"
-            android:title="Справочник" />
+            android:title="@string/reference_book_title" />
         <item android:id="@+id/r_page"
-            android:title="Параллельное соединение резисторов" />
+            android:title="@string/r_title" />
         <item android:id="@+id/l_page"
-            android:title="Индуктивность катушки"/>
+            android:title="@string/l_title"/>
         <item android:id="@+id/lc_page"
-            android:title="Колебательный контур"/>
-        <item android:id="@+id/calc_page"
-            android:title="Калькулятор"/>
+            android:title="@string/lc_title"/>
     </group>
 
 </menu>

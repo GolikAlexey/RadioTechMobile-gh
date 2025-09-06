@@ -14,6 +14,12 @@
     <string name="r1_input">Введите R1</string>
     <string name="r2_input">Введите R2</string>
     <string name="r3_input">Введите R3</string>
+    <string name="n_input">Введите количество витков</string>
+    <string name="d_input">Введите диаметр катушки</string>
+    <string name="length_input">Введите длину намотки</string>
+    <string name="big_d_ring_input">Введите D</string>
+    <string name="d_ring_input">Введите d</string>
+    <string name="h_ring_input">Введите h</string>
     <string name="f_calculate">Рассчитать  F</string>
     <string name="l_calculate">Рассчитать  L</string>
     <string name="c_calculate">Рассчитать  C</string>
@@ -55,6 +61,7 @@
     </string-array>
 
     <string-array name="spinner_L_core_ring">
+        <item>Выбрать сердечник</item>
         <item>М 7 ВН</item>
         <item>М 9 ВН</item>
         <item>М 20 ВН</item>
