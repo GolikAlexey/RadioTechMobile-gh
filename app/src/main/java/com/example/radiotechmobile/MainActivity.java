@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (item.getItemId() == R.id.lc_page) {
                     replaceFragment(new OscillatoryCircuit());
                     drawerLayout.closeDrawer(GravityCompat.START);
+                } else if (item.getItemId() == R.id.led_page) {
+                    replaceFragment(new CurrentLimitingResistor());
+                    drawerLayout.closeDrawer(GravityCompat.START);
                 }
                 return false;
             }

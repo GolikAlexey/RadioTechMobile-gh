@@ -7,6 +7,7 @@
     <string name="lc_title">Колебательный контур</string>
     <string name="r_title">Параллельное соединение резисторов</string>
     <string name="l_title">Индуктивность катушки</string>
+    <string name="led_title">Подключение светодиода</string>
     <string name="reference_book_title">Справочник</string>
     <string name="l_input">Введите L</string>
     <string name="c_input">Введите C</string>
@@ -20,9 +21,13 @@
     <string name="big_d_ring_input">Введите D</string>
     <string name="d_ring_input">Введите d</string>
     <string name="h_ring_input">Введите h</string>
+    <string name="u_input">Напряжение источника</string>
+    <string name="u_led_input">Напряжение светодиода</string>
+    <string name="i_led_input">Прямой ток светодиода</string>
     <string name="f_calculate">Рассчитать  F</string>
     <string name="l_calculate">Рассчитать  L</string>
     <string name="c_calculate">Рассчитать  C</string>
+    <string name="r_led_calculate">Рассчитать  R</string>
     <string name="r_calculate">Рассчитать\nобщее  R</string>
     <string name="reset">Сброс</string>
 

@@ -3,12 +3,14 @@
     <group android:id="@+id/group1">
         <item android:id="@+id/reference_book_page"
             android:title="@string/reference_book_title" />
-        <item android:id="@+id/r_page"
-            android:title="@string/r_title" />
         <item android:id="@+id/l_page"
             android:title="@string/l_title"/>
         <item android:id="@+id/lc_page"
             android:title="@string/lc_title"/>
+        <item android:id="@+id/r_page"
+            android:title="@string/r_title" />
+        <item android:id="@+id/led_page"
+            android:title="@string/led_title" />
     </group>
 
 </menu>
